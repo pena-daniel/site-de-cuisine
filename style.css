@@ -13,6 +13,8 @@ header{
     width: 100%;
     height: 70px;
     background-color: #f0932b;
+    position: fixed;
+    z-index: 9;
     
 }
 label.logo{
@@ -57,14 +59,18 @@ a:hover{
 
 .principale{
    width: 100%;
-   height: 1450px;
+   min-height: 850px;
    display: inline-block;
    overflow: hidden;
+}
+.description{
+    margin-top: 3rem;
+    width: 100%;
 }
 .description h1{
     line-height: 80px;
     text-align: center;
-    padding-left:30rem;  
+    padding-top: 3rem;  
     font-size: 30px;
     font-weight: bold;
     text-decoration: underline;
@@ -74,13 +80,15 @@ a:hover{
     line-height: 25px;
     margin-bottom: 7rem;
     margin-left: 5rem;
-    width: 90%;
-    
+    width: 90%;    
 }
 .left{
+    text-align: justify;
     position: relative;
-    top: -30rem;
+    top: -6rem;
 }
+    
+
 .left div{display: block;}
 .left h1{
     font-size: 25px;
@@ -98,8 +106,8 @@ a:hover{
     width: 100%;
     height: 290px;
 }
-.principale section{
-    display: inline-block;
+.principale section:nth-of-type(2),.principale section:nth-of-type(3){
+    display: inline-flex;
     width: 50%;
     
 }
@@ -123,26 +131,30 @@ article h2{
     padding: 5px;
     font-size: 25px;
 }
-section .rigth{
+section .contenue .rigth{
     width: 48%;
     height: 400px;
-    display: inline-block;
-    
+    display: inline-flex;    
 }
 video{
-    width: 40%;
+    width: 50%;
     position: fixed;
-    bottom: 5%;
-    right: 2rem;
+    bottom: .5%;
+    right: 1rem;
+    z-index: -1;
 }
+
+/* --------------------------------footer-------------------------------------------- */
+
 footer {
     width: 100%;
     height: 100px;
     text-align: center;
     line-height: 80px;
     background-color: #535c68;
-    z-index: 5;
+    z-index: 25;
 }
+
 
 
 
@@ -177,4 +189,18 @@ footer {
         font-size: 20px;
     }
     #check:checked ~ ul{left: 0;}
+    footer h2{font-size: 20px;}
+    .description h1{
+        line-height: 80px;
+        font-size: 20px;
+        padding-left: 8rem;
+
+    }
+    .description p {
+        text-align: justify;
+        line-height: 20px;
+        width: 80%; 
+        margin-left: 3rem;   
+    }
+ 
 }
